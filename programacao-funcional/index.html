@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programação Funcional</title>
+
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/reveal.js/dist/theme/night.css"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>Programação Funcional</h3>
+          <ul>
+            <li class="fragment">Paradigmas de Programação</li>
+            <li class="fragment">Por quê é relevante?</li>
+            <li class="fragment">Princípios da PF</li>
+            <li class="fragment">Fontes e Recomendações</li>
+          </ul>
+        </section>
+
+        <section>
+          <section>
+            <h3>Paradigmas de Programação</h3>
+            <p class="fragment">
+              Definição: é a forma de se estruturar uma solução de um problema
+              computacional.
+            </p>
+          </section>
+          <section>
+            <img
+              src="https://miro.medium.com/v2/resize:fit:775/1*sH3laAdBV74SCHWGRzjVIg.jpeg"
+            />
+          </section>
+          <section>
+            <p>
+              Grande parte das linguagens de programação modernas são
+              <b>multi-paradigmas</b>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Por quê a programação funcional é relevante na atualidade?</h3>
+          </section>
+          <section>
+            <h3>Lei de Moore</h3>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Lei_de_moore_2006.png/550px-Lei_de_moore_2006.png"
+            />
+          </section>
+          <section>
+            <h3>Fim da Lei 💀</h3>
+            <p>
+              Está cada vez mais difícil aumentar a velocidade dos
+              processadores, entre os motivos estão:
+            </p>
+            <ul>
+              <li class="fragment">Problemas de dissipação de calor</li>
+              <li class="fragment">Problemas de consumo de energia</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Solução</h3>
+            <div class="fragment">
+              <img
+                src="https://media2.giphy.com/media/J13MUhDkvmosPanF5o/200.webp?cid=790b761142u1b7og22wwmv3t0rgiwlawtndu9123m0kyu9dp&ep=v1_gifs_search&rid=200.webp&ct=g"
+              />
+              <p>Processadores com mais núcleos</p>
+            </div>
+          </section>
+          <section>
+            <h3>Concorrência</h3>
+            <ul>
+              <li class="fragment">
+                <p>
+                  Programação concorrente é a execução simultânea de várias
+                  tarefas em um sistema de computador.
+                </p>
+              </li>
+              <li class="fragment">
+                <p>
+                  Sistemas concorrentes tiram maior proveito do poder de
+                  processamento do processador.
+                </p>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Princípios da Programação Funcional</h3>
+          </section>
+
+          <section>
+            <h3>Imutabilidade</h3>
+          </section>
+
+          <section>
+            <h3>Funções Puras</h3>
+            <image
+              src="https://images.prismic.io/turing/65980cb0531ac2845a2726f3_functional_programming_75ad6d1a16.webp?auto=format,compress"
+            />
+          </section>
+
+          <section>
+            <h3>First-class functions</h3>
+          </section>
+
+          <section>
+            <h3>Recursão</h3>
+            <image
+              src="https://miro.medium.com/v2/resize:fit:1400/1*2KksCoUg9JY6ngOLSFm-Lg.png"
+            />
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Fontes e Recomendações</h3>
+            <ul>
+              <li class="fragment">
+                <a href="http://www.gotw.ca/publications/concurrency-ddj.htm"
+                  >[Artigo] The free lunch is over</a
+                >
+              </li>
+              <li class="fragment">
+                <a href="https://www.youtube.com/watch?v=KiF10RgaC5k"
+                  >[Vídeo] freeCodeCamp Podcast - José Valim</a
+                >
+              </li>
+              <li class="fragment">
+                <a href="https://www.youtube.com/watch?v=CzGSaXbPFRA"
+                  >[Vídeo] 1.1 - Programação Funcional em Haskell: Paradigmas de
+                  Programação</a
+                >
+              </li>
+              <li class="fragment">
+                <a href="https://www.youtube.com/watch?v=T980iXAlWAY"
+                  >[Vídeo] 1.2 - Programação Funcional em Haskell: Paradigma de
+                  Programação Funcional</a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="/node_modules/reveal.js/dist/reveal.js"></script>
+    <script src="/node_modules/reveal.js/plugin/notes/notes.js"></script>
+    <script src="/node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="/node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
