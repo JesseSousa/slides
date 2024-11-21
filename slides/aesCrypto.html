@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criptografia AES</title>
+
+    <link rel="stylesheet" href="../node_modules/reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/reveal.js/dist/theme/serif.css"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>Criptografia AES</h3>
+          <ul>
+            <li class="fragment">Criptografia Simétrica e Assimétrica</li>
+            <li class="fragment">Operador XOR</li>
+            <li class="fragment">Descrição de Alto Nível do Algoritmo</li>
+            <li class="fragment">Vetor de Inicialização</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Criptografia Simétrica e Assimétrica</h4>
+          <img
+            src="https://www.thesslstore.com/blog/wp-content/uploads/2017/08/Asymmetric-vs-Symmetric.png"
+          />
+        </section>
+
+        <section>
+          <h4>Operador XOR</h4>
+          <p>
+            O operador XOR é uma operação lógica que retorna verdadeiro se
+            exatamente um dos operandos for verdadeiro.
+          </p>
+          <img
+            src="https://images.freeimages.com/vhq/images/previews/462/logic-xor-symbol-clip-art-90315.png"
+            width="5%"
+          />
+          <table>
+            <tr>
+              <th>A</th>
+              <th>B</th>
+              <th>RES</th>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <p>
+            O AES trabalha com blocos de 128 bits (16 bytes) e chaves de 128,
+            192 ou 256.
+          </p>
+          <img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/63ac3cf2cb47d5a29c1210fca521f9e4e49e39b1"
+          />
+
+          <p>
+            O algoritmo é composto por 10, 12 ou 14 rodadas, dependendo do
+            tamanho da chave.
+          </p>
+        </section>
+
+        <section>
+          <h4>Descrição de Alto Nível do Algoritmo</h4>
+
+          <ul>
+            <li>KeyExpansion</li>
+            <li>AddRoundKey</li>
+            <li>ShiftRows</li>
+            <li>MixColumns</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>AddRoundKey</h4>
+          <p>É uma operação de XOR entre o estado atual e a chave da rodada.</p>
+          <img src="https://www.fredscave.com/bitwise-xor.svg" />
+        </section>
+
+        <section>
+          <h4>ShiftRows</h4>
+          <p>É uma operação de deslocamento de linhas.</p>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/AES-ShiftRows.svg/320px-AES-ShiftRows.svg.png"
+          />
+        </section>
+
+        <section>
+          <h4>MixColumns</h4>
+          <p>É uma operação de multiplicação de matrizes.</p>
+          <img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b35516e14dcf7ed323058752cfbe832f2db5f305"
+          />
+        </section>
+
+        <section>
+          <h4>Vetor de Inicialização (IV)</h4>
+          <p class="fragment">
+            É um vetor gerado aleatoriamente para cada mensagem.
+          </p>
+          <p class="fragment">
+            Antes de iniciar o algoritmo uma operação XOR é feita com o estado e
+            o IV.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="../node_modules/reveal.js/dist/reveal.js"></script>
+    <script src="../node_modules/reveal.js/plugin/notes/notes.js"></script>
+    <script src="../node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>

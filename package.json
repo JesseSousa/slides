@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build index.html --public-url https://jessesousa.github.io/slides/"
+    "build": "parcel build index.html --public-url https://jessesousa.github.io/slides/",
+    "start": "parcel index.html"
   },
   "keywords": [],
   "author": "",
